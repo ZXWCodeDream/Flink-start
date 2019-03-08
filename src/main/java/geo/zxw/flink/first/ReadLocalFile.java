@@ -10,6 +10,9 @@ import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
  * 将获取的数据进行解析，String类型转为Integer类型。同时Flink窗口默认设定为1s中读取，
  * writeAsText()方法将每一秒读取的数据存放到一个文件中
  * print()方法则将所有数据输出。key（时间s）> value(值，转换后的数值)
+ *
+ * 概念：Flink的数据模型不基于键值对，所谓存在的键是虚拟的：它们被定义为实际数据上的函数，
+ * 以指导数据分组。
  */
 public class ReadLocalFile {
 
